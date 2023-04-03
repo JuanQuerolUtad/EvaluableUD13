@@ -4,12 +4,10 @@ import java.util.ArrayList;
 
 
 public class Pantalla {
-	private Rectangulo rectangulo;
-	private Triangulo triangulo;
 	private ArrayList<Figura>figuras;
-	public Pantalla(ArrayList<Figura> figuras) {
+	public Pantalla() {
 		super();
-		this.figuras = figuras;
+		this.figuras = new ArrayList<>();
 	}
 	
 	public void añade_Figura(Figura f) {
@@ -20,19 +18,23 @@ public class Pantalla {
 			figuras.get(i).setCaracter(c);
 		}
 	}
-	public void lista_Figura(char c) {
+	public void lista_Figura() {
 		for (int i = 0; i < figuras.size(); i++) {
-			figuras.get(i).Nombre();
+			
+			System.out.println(figuras.get(i).Nombre());
 		}
 	}
-	public void area_Figura(char c) {
+	public void area_Figura() {
+		int suma = 0;
 		for (int i = 0; i < figuras.size(); i++) {
-			figuras.get(i).Area();
+			suma = suma+figuras.get(i).Area();
 		}
+		System.out.println(suma);
 	}
-	public void muestra_Figura(char c) {
+	public void muestra_Figura() {
 		for (int i = 0; i < figuras.size(); i++) {
-			figuras.get(i).Dibujar();;
+			figuras.get(i).Dibujar();
+			
 		}
 	}
 	

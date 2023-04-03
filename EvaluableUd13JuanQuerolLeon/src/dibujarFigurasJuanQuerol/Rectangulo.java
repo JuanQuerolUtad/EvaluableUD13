@@ -24,8 +24,11 @@ public class Rectangulo implements Figura{
 		for (int i = 0; i < altura; i++) {
 			for (int j = 0; j < base; j++) {
 				System.out.print(caracter);
+				
 			}
+			System.out.println(" ");
 		}
+		System.out.println(" ");
 		
 	}
 

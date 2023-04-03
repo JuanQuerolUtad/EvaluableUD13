@@ -22,40 +22,48 @@ public class Triangulo implements Figura{
 	@Override
 	public void Dibujar() {
 		if (tipo.equalsIgnoreCase("a")) {
-			for (int i = lado+1; i > 0; i--) {
-				for (int j = 0; j < lado; j++) {
+			for (int i = lado; i > 0; i--) {
+				for (int j = 0; j < i; j++) {
 					System.out.print(caracter);
 				}
+				System.out.println(" ");
 			}
+			System.out.println(" ");
 		}
 		else if (tipo.equalsIgnoreCase("b")) {
-			for (int i = lado+1; i > 0; i++) {
+			for (int i = 0; i < lado; i++) {
 				for (int j = 0; j < lado; j++) {
-					if (j<lado) {
+					if (j<i) {
 						System.out.print(" ");
 					}else {
 						System.out.print(caracter);
 					}
 				}
+				System.out.println(" ");
 			}
+			System.out.println(" ");
 		}
 		else if (tipo.equalsIgnoreCase("c")) {
 			for (int i = 0; i < lado; i++) {
 				for (int j = 0; j < (i+1); j++) {
 					System.out.print(caracter);
 				}
+				System.out.println(" ");
 			}
+			System.out.println(" ");
 		}
 		else if (tipo.equalsIgnoreCase("d")) {
-			for (int i = 0; i < lado; i++) {
-				for (int j = 0; j < lado; j++) {
-					if (j<lado) {
+			for (int i = lado+1; i > 0; i--) {
+				for (int j = 0; j < lado+1; j++) {
+					if (j<i) {
 						System.out.print(" ");
 					}else {
 						System.out.print(caracter);
 					}
 				}
+				System.out.println(" ");
 			}
+			System.out.println(" ");
 		} 
 		else {
 			System.out.println("no existe ese tipo");
