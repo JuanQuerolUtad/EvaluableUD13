@@ -15,12 +15,14 @@ public class Triangulo implements Figura{
 
 	@Override
 	public String Nombre() {
-		// TODO Auto-generated method stub
+		//da el nombre de la figura y de los datos
 		return "Triangulo tipo " + tipo + " lado " + lado;
 	}
 
 	@Override
 	public void Dibujar() {
+		//dibuja la figura con el caracter que lean pedido 
+		//Arriba - Izquierda
 		if (tipo.equalsIgnoreCase("a")) {
 			for (int i = lado; i > 0; i--) {
 				for (int j = 0; j < i; j++) {
@@ -30,6 +32,7 @@ public class Triangulo implements Figura{
 			}
 			System.out.println(" ");
 		}
+		//Arriba - Derecha
 		else if (tipo.equalsIgnoreCase("b")) {
 			for (int i = 0; i < lado; i++) {
 				for (int j = 0; j < lado; j++) {
@@ -43,6 +46,7 @@ public class Triangulo implements Figura{
 			}
 			System.out.println(" ");
 		}
+		//Abajo – Izquierda
 		else if (tipo.equalsIgnoreCase("c")) {
 			for (int i = 0; i < lado; i++) {
 				for (int j = 0; j < (i+1); j++) {
@@ -52,6 +56,7 @@ public class Triangulo implements Figura{
 			}
 			System.out.println(" ");
 		}
+		//Abajo - Derecha
 		else if (tipo.equalsIgnoreCase("d")) {
 			for (int i = lado+1; i > 0; i--) {
 				for (int j = 0; j < lado+1; j++) {
@@ -73,8 +78,9 @@ public class Triangulo implements Figura{
 
 	@Override
 	public int Area() {
+		//calcula el area del triangulo con la siguiente formula: base x altura /2
 		return (lado*lado)/2;
-		// TODO Auto-generated method stub
+		
 		
 	}
 
@@ -86,7 +92,7 @@ public class Triangulo implements Figura{
 
 	@Override
 	public char getCaracter() {
-		// TODO Auto-generated method stub
+		
 		return caracter;
 	}
 

@@ -15,12 +15,13 @@ public class Rectangulo implements Figura{
 
 	@Override
 	public String Nombre() {
-		
+		//da el nombre de la figura y de los datos
 		return "Rectangulo " + base + " X " + altura;
 	}
 
 	@Override
 	public void Dibujar() {
+		//dibuja la figura con el caracter que lean pedido 
 		for (int i = 0; i < altura; i++) {
 			for (int j = 0; j < base; j++) {
 				System.out.print(caracter);
@@ -34,6 +35,7 @@ public class Rectangulo implements Figura{
 
 	@Override
 	public int Area() {
+		//calcula el area del rectangulo con la siguiente formula base x altura
 		return base*altura;
 		
 		
